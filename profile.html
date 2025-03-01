@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <!--属性bgcolor已经淘汰，且只能用于body，此处无效-->
-    <head bgcolor="ff0000">
+    <!--<head bgcolor="ff0000">-->
+    <head>
         <!--这里是注释。title显示在浏览器标题栏-->
         <!---->
         <title>profile</title>
+        <head>
+            <!--用type="css/css"的方式引用外部样式表-->
+            <!--内部样式表-->
+            <!--对某个类中的某个特定元素 .country p-->
+            <!--对某个id中的某个特定元素 #china p-->
+            <!--对某个id中的某个特定类的某个特定元素 #China_VS_American .china h1-->
+            <style>
+                
+                
+                p{margin-left: 20px}
+                h1{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif}
+                strong{font-size: 50px;}
+                table{border: 1px solid black;}
+                td{border: 1px solid black;}
+                th{border: 1px solid black; background: #66ccff;}
+                .country{
+                    background-color: #66ccff;
+                    color: #993300;
+                    margin: 20px;
+                    padding: 20px;
+                    width: 190px;
+                }
+                
+                .country p{
+                    margin-left: 0;
+                }
+                .china{
+                    background-color: #ff0000;
+                    color: #ffff00;
+                }
+                #China_VS_American{
+                    width: max-content;
+                    border: 6px solid black;
+                }
+                #China_VS_American .china p{
+                    font-weight: 700;
+                }
+                .click_test{
+                    display: inline-block;
+                    border: 1px solid black;
+                    margin: 5px;
+                    border-radius: 5px;
+                    width: max-content;
+                }
+            </style>
+        </head>
+        
     </head>
-    <body style="background-color:yellow">
+    <!---->
+    <body>
         <!--属性align已经淘汰。用style里的text-align。-->
         <h1 align="center" >居中</h1>        
         <p>
@@ -16,12 +65,14 @@
             <a href="https://www.baidu.com">点击进入百度</a>
         </p>
         <p>Here is another paragraph</p>
-        <hr />
-        <hr />
-        <p>上面是两条水平线</p>
+        <a name="pall">
+            <hr />
+            <hr />
+            <p>上面是两条水平线</p>
+        </a>
         <p>第一行<br />第二行<br />第三行</p>
         <p>新的一段</p>
-        <h1 style="background-color:red">红底标题</h1>
+        <h1><span style="background-color: red;">红底标题</span></h1>
         <p>黄底主体</p>
         <p style="background-color:green">绿底段落</p>
         <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verdana字体</p>
@@ -32,10 +83,134 @@
             <hr />
             <a href="#" style="display: block; text-align:center">这个块级链接居中</a>
         </p>
-        <em>着重</em>
-        <strong>加重语气</strong>
-        <ins>插入字</ins>
-        <del>删除字</del>
-
+        <em>em</em>
+        <strong>strong</strong>
+        <ins>ins</ins>
+        <del>del</del>
+        <p>后面是<q>引用</q>部分</p>
+        <p>鲁迅说过：</p>
+        <blockquote>blockquote里面是长引用</blockquote>
+        <blockquote>blockquote可以<br />用&ltbr /&gt换行</blockquote>
+        <p><abbr title="World Health Organization">WHO</abbr> cares</p>
+        <p>
+            <!--dir="rtl"的display改成block的话就会跑到屏幕最左边-->
+            <bdo dir="rtl" style="display: block">This sentence would be writen from right to left</bdo>
+            <bdo dir="ltr">This sentence would be writen from left to right</bdo>
+        </p>
+        <a href="/个人主页/pages/wow.html" name="wow" style="background-color: pink; display: block; width: 200px; margin: 0 auto;">
+            <p style="text-align: center">点击<img src="/个人主页/src/wow.jpg" height="18px" width="18px" style="display: inline;"/>变<strong>大</strong></p>
+        </a>
+        <a href="#pall">点击跳转至水平线</a>
+        <div>
+            <img src="none.jpg" alt="什么都没有" />
+        </div>
+        <a href="/个人主页/pages/black_and_white.html">
+            <!--ismap把鼠标点击图像的位置当做参数传递到新页面中-->
+            <img src="/个人主页/src/black and white.png" ismap alt="黑白" style="height: 100px; width: 100px;" />
+        </a>
+        <table>
+            <caption style="font-size: 20px;">乘法表</caption>
+            <tr>
+                <td style="border: none;"></td>
+                <th>一</th>
+                <th>二</th>
+            </tr>
+            <tr>
+                <th>一</th>
+                <td>一</td>
+                <td>二</td>
+            </tr>
+            <tr>
+                <th>二</th>
+                <td>二</td>
+                <td>四</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td></td>
+                <th colspan="3">横</td>
+            </tr>
+            <tr>
+                <th rowspan="3">竖</td>
+                <td>一一</td>
+                <td>一二</td>
+                <td>一三</td>
+            </tr>
+            <tr>
+                <td>二一</td>
+                <td>二二</td>
+                <td>二三</td>
+            </tr>
+            <tr>
+                <td>三一</td>
+                <td>三二</td>
+                <td>三三</td>
+            </tr>
+        </table>
+        <ul>
+            <li>中国</li>
+            <li>美国</li>
+        </ul>
+        <ol>
+            <li>中国</li>
+            <li>美国</li>
+        </ol>
+        <dl>
+            <dt>中国</dt>
+            <dd>社会主义国家</dd>
+            <dd>发展中国家</dd>
+            <dt>美国</dt>
+            <dt>英国</dt>
+            <dd>资本主义国家</dd>
+        </dl>
+        <div class="country china">
+            <h1>中国</h1>
+            <p>好完了好完了好完了好完了好完了好完了好完了好完了好完了好完了好完了</p>
+        </div>
+        <div class="country">
+            <h1>美国</h1>
+            <p>哎呀我去美国怎么这么坏哎呀我去美国怎么这么坏哎呀我去美国怎么这么坏</p>
+        </div>
+        <div id="China_VS_American">
+            <div class="country china" style="display: inline-block;">
+                <h1>中国</h1>
+                <p>好完了好完了好完了好完了好完了好完了好完了好完了好完了好完了好完了</p>
+            </div>
+            <div class="country" style="display: inline-block;">
+                <h1>美国</h1>
+                <p>哎呀我去美国怎么这么坏哎呀我去美国怎么这么坏哎呀我去美国怎么这么坏</p>
+            </div>
+        </div>
+        <!--<iframe frameborder="0" src="/个人主页/pages/iframe_test.html"></iframe>-->
+        
+        <iframe name="iframe_1" style="height: 400px; width: 640px;" id="iframe_1"></iframe>
+        <p>
+            <a href="https://www.bilibili.com/" target="iframe_1">点击进入B里</a>
+            <!--实现方式不一样-->
+            <a onclick="fun3()">点击退出B里</a>
+        </p>
+        
+        
+        <div onclick="fun1()" id="div1" class="click_test" style=" background-color: #ff0000;">点我</div>
+        <div onclick="fun2()" id="div2" class="click_test" style=" background-color: #0000ff;">别点我</div>
+        <script>
+            function fun1(){
+                document.getElementById("div1").innerHTML="别点我";
+                document.getElementById("div2").innerHTML="点我";
+                document.getElementById("div1").style.backgroundColor="#0000ff";
+                document.getElementById("div2").style.backgroundColor="#ff0000";
+                
+            }
+            function fun2(){
+                document.getElementById("div1").innerHTML="点我";
+                document.getElementById("div2").innerHTML="别点我";
+                document.getElementById("div1").style.backgroundColor="#ff0000";
+                document.getElementById("div2").style.backgroundColor="#0000ff";
+            }
+            function fun3(){
+                document.getElementById("iframe_1").src="";
+            }
+        </script>
     </body>
 </html>
