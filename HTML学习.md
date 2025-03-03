@@ -8,7 +8,7 @@
 浏览器读取HTML文档，使用标签解释页面内容。
 # 基本实例
 ## 标题：`<h1>` ~ `<h6>`
-```HTML []
+```HTML
 <h1>一级标题</h1>
 <h2>二级标题</h2>
 <h3>三级标题</h3>
@@ -16,17 +16,17 @@
 ```
 > 请仅仅把标题标签用于标题文本。不要仅仅为了产生粗体文本而使用它们。请使用其它标签或 CSS 代替。
 ## 段落：`<p>`
-```HTML []
+```HTML
 <p>段落1</p>
 <p>段落2</p>
 ```
 ## 链接：`<a>`
-```HTML []
+```HTML
 <a herf="https://www.baidu.com">点击进入百度</p>
 ```
 > herf是一个属性，表示链接的地址。
 ## 图像：`<img>`
-```HTML []
+```HTML
 <img src="/image/1.png" width="100" height="200" />
 ```
 > src表示图片的地址
@@ -44,7 +44,7 @@
 - 大多数元素可以拥有属性
 ## 嵌套
 HTML文档由嵌套的HTML元素构成
-```HTML []
+```HTML
 <html>
     <body>
         <p>段落1</p>
@@ -65,7 +65,7 @@ HTML文档由嵌套的HTML元素构成
 
 ## 空HTML元素
 只有一个标签（如`<br />`换行符号）
-```HTML []
+```HTML
 <br />
 ```
 > 尽管`<br>`也有效，但添加斜杠`<br />`是正确方法
@@ -76,27 +76,27 @@ XHTML强制使用小写
 属性提供了有关HTML元素的**更多**信息
 规定在**开始标签**中
 以**名称/值**对的形式出现
-```HTML []
+```
 name="value"
 ```
 ## 属性实例
 链接的地址在href属性中指定
-```HTML []
+```HTML
 <a href="www.baidu.com">点击进入百度</a>
 ```
 ## 更多HTML属性实例
 ### align
-```HTML []
+```HTML
 <h1 align="center">居中</h1>
 ```
 ### bgcolor
 背景颜色
-```HTML []
+```HTML
 <body bgcolor="66ccff"></body>
 ```
 ### border
 边框
-```HTML []
+```HTML
 <table border="1"></table>
 ```
 > - 属性推荐使用小写
@@ -104,7 +104,7 @@ name="value"
 > - 如果属性值本身含有双引号，那么必须使用单引号
 # 标题
 通过`<h1>`~`<h6>`进行定义
-```HTML []
+```HTML
 <h1>一级标题</h1>
 <h2>二级标题</h2>
 <h3>三级标题</h3>
@@ -116,31 +116,31 @@ HTML会自动在**块级元素**前后添加空行，比如段落、标题
 - 根据逻辑进行分级
 ## 水平线
 `<hr />`在页面中创建水平线
-```HTML []
+```HTML
 <hr />
 ```
 > 可用于分割文章中的小节
 
 ## 注释
-```HTML []
+```HTML
 <!--浏览器自动忽略注释里的内容-->
 ```
 > 可用于分割文章中的小节
 # 段落
-```HTML []
+```HTML
 <p>段落1</p>
 <p>段落2</p>
 ```
 > 空段落`<p></p>`会产生一个空行，但是不建议这么做。
 ## 不要忘了结束标签
-```HTML []
+```HTML
 <p>不要忘了结束标签
 <p>不要忘了结束标签
 ```
 > 尽管HTML可以正常显示，但是不建议。XHTML不支持。
 ## 折行
 在段落中使用`<br />`进行换行，而不产生新段落
-```HTML []
+```HTML
 <p>第一行<br />第二行<br />第三行</p>
 <p>新的一段</p>
 ```
@@ -161,14 +161,14 @@ HTML会自动在**块级元素**前后添加空行，比如段落、标题
 <s>定义删除线文本</s>
 <strike>定义删除线文本</strike>
 <u>定义下划线文本</u>
-align 定义文本的对齐方式
+<!--align 定义文本的对齐方式
 bgcolor 定义背景颜色
-color 定义文本颜色
+color 定义文本颜色-->
 ```
 > 以上标签和属性应该用样式`style=""`代替
 - 多个样式之间用`;`分隔
 ## 实例：背景颜色`background-color`
-```HTML []
+```HTML
 <body style="background-color:yellow">
     <h1 style="background-color:red">红底标题</h1>
     <p>黄底主体</p>
@@ -180,7 +180,7 @@ color 定义文本颜色
 - 字体：font-family
 - 颜色：color
 - 尺寸：font-size
-```HTML []
+```HTML
 <body>
     <p style="font-family: Verdana">Verdana字体</p>
     <p style="color: blue; font-size:small">蓝色小字段落</p>
@@ -188,7 +188,7 @@ color 定义文本颜色
 ```
 - 旧的`font`标签已被淘汰
 ## 实例：文本对齐`text-align`
-```HTML []
+```HTML
 <p style="text-align:center">这段话居中</p>
 ```
 - 旧的`align`属性已被淘汰
@@ -198,7 +198,7 @@ color 定义文本颜色
 - 例如，`<strong>`和`<em>`表示强调、加重，应该在HTML中展示。
 - 而`<b>`（加粗）、`<i>`（斜体）、`<big>`（大）、`<small>`（小）等纯样式性质的描述，应该通过CSS实现。
 - `<div>`和`<span>`没有语义性，在使用时用别的含有语义的标签，如`<strong>`和`<em>`等。
-```HTML []
+```HTML
 <em>着重</em>
 <strong>加重语气</strong>
 <ins>插入字</ins>
@@ -207,14 +207,14 @@ color 定义文本颜色
 # 引用
 ## 短引用`<q>`
 浏览器通常会为`<q>`元素包围引号
-```HTML []
+```HTML
 <p>后面是<q>引用</q>部分</p>
 ```
 ## 长引用`<blockquote>`
 定义被引用的节
 浏览器通常会对`<blockquote>`元素进行**缩进**处理
 用`cite`属性标记本节的来源
-```HTML []
+```HTML
 <p>鲁迅说过：</p>
 <blockquote cite="鲁迅">blockquote里面是长引用</blockquote>
 <blockquote>blockquote<br />可以用<br />换行</blockquote>
@@ -223,7 +223,7 @@ color 定义文本颜色
 指明这是缩略词
 用`title`属性标记本缩略词的含义
 在浏览器上，把鼠标移到缩略词上会显示出含义
-```HTML []
+```HTML
 <p><abbr title="World Health Organization">WHO</abbr> cares</p>
 ```
 ## 定义`<dfn>`
@@ -236,7 +236,7 @@ color 定义文本颜色
 浏览器通常以斜体显示
 ## 双向重写`<bdo>`
 定义双流向文本
-```HTML []
+```HTML
 <p>
     <!--dir="rtl"的display改成block的话就会跑到屏幕最左边-->
     <bdo dir="rtl" style="display: block">This sentence would be writen from right to left</bdo>
@@ -248,7 +248,7 @@ color 定义文本颜色
 放置提示信息
 可以不在同一行，一对注释可以注释多行代码
 ## 条件注释
-```HTML []
+```HTML
 <!--[if IE 8]>
     ...
 <![endif]-->
@@ -257,21 +257,21 @@ color 定义文本颜色
 # 颜色
 ## 颜色值
 HEX（如#ffff00）
-RGN（如(255,255,0)）
+RGB（如(255,255,0)）
 ## 颜色名
 支持16种颜色名，其他颜色只能用颜色值
 # CSS
 ## 如何使用样式
 ### 外部样式表
 一个样式需要应用到很多页面
-```HTML []
+```HTML
 <head>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="mystyle.css" />
 </head>
 ```
 ### 内部样式表
 单个文件需要特别样式
-```HTML []
+```HTML
 <head>
     <style type="text/css">
         body{background-color: red}
@@ -281,7 +281,7 @@ RGN（如(255,255,0)）
 ```
 ### 内联样式
 个别元素需要应用特殊的样式（通过style属性）
-```HTML []
+```HTML
 <p style="color: blue; font-size:small">蓝色小字段落</p>
 ```
 **样式按照优先级规则生效**
@@ -293,7 +293,7 @@ HTML使用超链接与网络上的另一个文档相连
 - 通过`href`属性，创建一个指向**另一个文档**的链接
 - 通过`name`属性，创建**文档内**的书签
 ## 语法
-```HTML []
+```HTML
 <a href="#">链接文本</a>
 ```
 `href`指定链接的目标
@@ -301,13 +301,13 @@ HTML使用超链接与网络上的另一个文档相连
 > 链接文本不一定是文字，图片或者其他HTML元素都可以是文本
 ## `target`属性
 定义被链接的文档在何处显示（默认将当前网页刷新为新文档）
-```HTML []
+```HTML
 <a href="#" target="_blank">在新页面中打开链接</a>
 ```
 ## `name`属性
 定义**锚**的名称，创建HTML页面中的书签
 可以根据命名锚，创建跳至某个锚的链接
-```HTML []
+```HTML
 <a name="pall">
     <hr />
     <hr />
@@ -325,12 +325,12 @@ HTML使用超链接与网络上的另一个文档相连
 ## 图像标签`<img>`和源属性`src`
 `<img>`是空标签
 源属性`src`的值是图像的URL地址
-```HTML []
+```HTML
 <img src="url" />
 ```
 ## 替换文本属性`alt`
 当浏览器无法载入图片时，浏览器将显示这个替代性的文本而不是图像，告诉读者未加载出的图像的信息
-```HTML []
+```HTML
 <img src="none.jpg" alt="什么都没有" />
 ```
 > 加载图片需要时间，建议慎用图片
@@ -343,7 +343,7 @@ HTML使用超链接与网络上的另一个文档相连
 - 表格由`<table>`标签定义
 - 表格中的每行由`<tr>`（**t**able**r**ow）标签定义
 - 每行中的每格由`<td>`（**t**able**d**ata）标签定义
-```HTML []
+```HTML
 <head>
     <style>
         table{border: 1px solid black;}
@@ -373,7 +373,7 @@ HTML使用超链接与网络上的另一个文档相连
 某些浏览器无法处理无内容的单元格。这时可以通过添加空格转义符`&nbsp;`解决。
 ## 更多实例
 ### 表格标题`<caption>`
-```HTML []
+```HTML
 <body>
     <caption>乘法表</caption>
     <table>
@@ -390,7 +390,7 @@ HTML使用超链接与网络上的另一个文档相连
 </body>
 ```
 ### 跨行（列）单元格`rowspan`（`colspan`）
-```HTML []
+```HTML
 <table>
     <tr>
         <td></td>
@@ -420,7 +420,7 @@ HTML使用超链接与网络上的另一个文档相连
 ## 无序列表
 用`<ul>`定义一个无序列表（**u**nordered **l**ist）
 每个表项用`<li>`定义
-```HTML []
+```HTML
 <ul>
     <li>中国</li>
     <li>美国</li>
@@ -431,7 +431,7 @@ HTML使用超链接与网络上的另一个文档相连
 ## 有序列表
 用`<ol>`定义一个有序列表（**o**rdered **l**ist）
 每个表项同样用`<li>`定义
-```HTML []
+```HTML
 <ol>
     <li>中国</li>
     <li>美国</li>
@@ -446,7 +446,7 @@ HTML使用超链接与网络上的另一个文档相连
 用`<dl>`开始一个定义列表（**d**escription **l**ist），也叫描述列表
 用`<dt>`开始一个术语项（**d**escription **t**erm）
 用`<dd>`开始一个描述项（**d**escription **d**escription）
-```HTML []
+```HTML
 <dl>
     <dt>中国</dt>
     <dd>社会主义国家</dd>
@@ -456,7 +456,7 @@ HTML使用超链接与网络上的另一个文档相连
 ```
 > 浏览器会默认对`<dt>`加粗，对`<dd>`缩进
 `<dt>`和`<dd>`可以一对多，也可以多对一（只起一个渲染作用）
-```HTML []
+```HTML
 <dl>
     <dt>中国</dt>
     <dd>社会主义国家</dd>
@@ -482,7 +482,7 @@ HTML使用超链接与网络上的另一个文档相连
 > 如上方所谈，`<div>`和`<span>`没有语义性，在使用时用别的含有语义的标签，如`<strong>`和`<em>`等。
 # 类
 对元素设置类，使我们能够为特定的一类元素定义相同的CSS样式
-```HTML []
+```HTML
 <style>
 .country{
     background-color: #66ccff;
@@ -513,7 +513,7 @@ HTML使用超链接与网络上的另一个文档相连
 指定HTML元素的唯一ID，在HTML文档中必须是唯一的。
 用于指向CSS中的特定样式声明。
 JavaScript也可以使用它来访问和操作拥有特定ID的元素。
-```HTML []
+```HTML
 <style>
     #China_VS_American{
         width: max-content;
@@ -528,7 +528,7 @@ JavaScript也可以使用它来访问和操作拥有特定ID的元素。
 一个id名称只能由页面中的**一个**HTML元素使用
 同一个类名可以由**多个**HTML元素使用
 ## 通过ID和链接实现HTML书签
-```HTML []
+```HTML
 <h1 id="C1">第一章</h1>
 ...
 <a href="#C1">跳转到第一章</a>
@@ -539,8 +539,8 @@ JavaScript也可以使用它来访问和操作拥有特定ID的元素。
 学到JS再说
 # 内联框架iframe
 用于在网页内显示网页
-```HTML []
-<iframe scr="URL">未加载成功URL</iframe>
+```HTML
+<iframe src="URL">未加载成功URL</iframe>
 ```
 ## 设置高度和宽度
 使用`height`和`width`
@@ -548,7 +548,7 @@ JavaScript也可以使用它来访问和操作拥有特定ID的元素。
 可设置属性`frameborder="0"`
 ## 在iframe打开链接
 链接的`target`属性引用`iframe`的`name`属性
-```HTML []
+```HTML
 <iframe name="iframe_1" style="height: 400px; width: 640px;"></iframe>
 <p>
     <a href="https://www.bilibili.com/" target="iframe_1">点击进入B里</a>
@@ -562,7 +562,9 @@ JavaScript也可以使用它来访问和操作拥有特定ID的元素。
 - 更改内容
 - 更改样式
 - 更改属性
-```HTML []
+```HTML
+<iframe src="https://www.bilibili.com/" name="iframe_1" style="height: 400px; width: 640px;"></iframe>
+<p><a onclick="fun3()">点击退出B里</a></p>
 <div onclick="fun1()" id="div1" class="click_test" style=" background-color: #ff0000;">点我</div>
 <div onclick="fun2()" id="div2" class="click_test" style=" background-color: #0000ff;">别点我</div>
 <script>
@@ -579,5 +581,71 @@ JavaScript也可以使用它来访问和操作拥有特定ID的元素。
         document.getElementById("div1").style.backgroundColor="#ff0000";
         document.getElementById("div2").style.backgroundColor="#0000ff";
     }
+    function fun3(){
+    document.getElementById("iframe_1").src="";
+}
 </script>
 ```
+## `noscript`标签
+如果浏览器不支持脚本，将会显示标签内容
+```HTML
+<noscript>浏览器不支持JavaScript</noscript>
+```
+# 文件路径
+使用路径链接外部文件（网页、图像、CSS、JS）
+## 绝对路径
+指向一个文件的完整URL
+例如`https://www.baidu.com/item/picture/dog.png`
+## 相对路径
+指向相对于当前页面路径的文件
+指向当前网站根目录中的文件：`/picture/dog.png`
+指向当前文件夹中的`picture`文件夹中的一个文件：`picture/dog.png`
+指向当前文件夹的上级文件夹中的`picture`文件夹中的一个文件：`../picture/dog.png`
+> 为了移植方便，在使用本机文件时尽可能使用相对路径
+# 头部元素
+`<head>`是所有头部元素的容器。
+如`<title>`、`<base>`、`<link>`、`<meta>`、`<script>`、`<style>`等
+## `<title>`标题
+浏览器工具栏、收藏至收藏夹、搜索引擎等显示的标题
+## `<base>`基准
+为页面上的所有连接规定默认地址`href`或默认目标`target`
+如果不设置，默认会以当前文档的URL作为基准
+```HTML
+<head>
+    <base href="https://www.baidu.com/" target="_blank" />
+</head>
+```
+## `<link>`连接关系
+常用于连接样式表
+```HTML
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/mystyle.css" />
+</head>
+```
+## `<style>`内部样式表
+定义样式信息
+## `<meta>`数据信息
+定义当前页面的信息
+通常用一对`name`和`content`属性来定义
+```HTML
+<head>
+    <meta charset="UTF-8" />
+    <meta name="desription" content="无情的广告机器" />
+    <meta name="keyword" content="眉目了, 李彦宏" />
+</head>
+```
+## `<script>`内部脚本
+定义当前网页脚本
+# 布局
+用`<div>`作为布局工具，用CSS进行定位
+## HTML5语义元素
+可使用语义元素创建多列布局
+> 不建议使用表格进行布局
+# 响应式设计
+能够根据网页尺寸的变化，动态调整布局
+如使用`float`样式或`bootstrap`
+# 计算机代码元素
+`<kbd>`定义键盘输入
+`<samp>`定义输出示例
+`<code>`定义编程代码（`<pre>`定义预格式化文本，保留换行和空格）
+`<var>`定义变量和公式
