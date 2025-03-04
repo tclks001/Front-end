@@ -385,3 +385,185 @@ div{
 ## 文本对齐`text-align`
 可以左对齐`left`，右对齐`right`，居中对齐`center`，两端对齐`justify`
 ### 文本方向
+`direction`属性控制文本的书写位置。`ltr`表示左边（默认），`rtl`表示右边
+（只影响块级元素，内联元素的方向由块级祖先决定）
+`unicode-bidi`属性控制文本方向。`bidi-override`将强制所有文本按照`direction`设置的方向显示。
+### 垂直对齐`vertical-align`
+控制图像在文本中的对齐方式
+`top`上对齐，`middle`居中对齐，`bottom`下对齐（默认）
+## 文字装饰`text-deoration`
+`none`：无装饰（可删除链接默认的下划线）
+`overline`：上划线
+`line-through`：删除线
+`underline`：下划线
+## 文本转换`text-transform`
+`uppercase`：大写
+`lowercase`：小写
+`capitalize`：首字母大写
+## 文字间距
+`text-indent`指定文本第一行的缩进（指定长度）
+`letter-spacing`指定文本中字符之间的间距
+`line-height`指定文本的行间距（浏览器默认是1.2左右）
+`word-spacing`指定文本中单词之间的间距
+`white-space`指定文本内空白的处理方式。如`nowrap`不换行
+## 文本阴影`text-shadow`
+设置阴影的偏移量
+```CSS
+p{
+    texr-shadow: 2px 2px 5px rgba(255,255,0,1);
+}
+```
+水平偏移，垂直偏移（正值向右下，负值向左上），模糊距离，颜色
+# 字体
+## 通用字体族
+- 衬线字体（Serif）在每个字母边缘都有一个小的笔触作为装饰，形式优美
+- 无衬线字体（Sans-serif）没有装饰，字母线条简洁（适合阅读）
+- 等宽字体（Monospace）字母比划宽度完全相同，用来显示机械式的外观
+- 草书字体（Cursive）人类的手写体
+- 幻想字体（Fantasy）装饰性、调皮的艺术字
+## 字体`font-family`
+可以包含多种字体作为后备，确保兼容（以通用字体结束，作为保底）
+## 字体样式
+### 字体样式`font-style`
+`normal`：正常显示（默认）
+`italic`：斜体（字体自带的原生斜体，基本都有）
+`oblique`：倾斜（如果有自带的oblique版本，则采用（很少有）；如果没有，则采用italic版本）
+### 字体粗细`font-weight`
+可选值：
+只选100~900的整百数。选非整百数时，浏览器可能会上下乱取
+**预设值：**
+- `normal`：400
+- `bold`：700
+- `bolder`：比父元素粗一点
+- `lighter`：比父元素细一点
+- 如果是文本元素，则自动继承父元素的粗细。否则不自动继承，默认为`normal`（除非设为`inherit`）。
+### 字体变体`font-variant`
+如果设置`font-variant: small-caps`，则会把小写字母写成**小型大写字母**。
+## 字体大小`font-size`
+默认普通文本（如段落）字体为`16px`（`=1em`）
+### 用像素px设置大小
+设置的是绝对大小
+```CSS
+p{
+    font-size: 14px;
+}
+```
+### 用em设置字体大小
+设置的是相对于父元素的大小
+```CSS
+p{
+    font-size: 0.8em;
+}
+```
+> 可能会导致多重包含后缩放叠加，难以计算的问题。
+### 响应式字体大小vw
+视口宽度**v**iewport **w**idth
+`1vw=视口宽度的1%`
+> 常用作标题字体大小，因为设置成段落字体大小的话，对于小屏幕字就太小了，不好认
+### 根相对大小rem
+设置的是相对于`<html>`根元素的字体大小
+更灵活，适合作为段落字体大小
+## 谷歌字体
+引用谷歌字体样式
+```HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia" />
+        <style>
+            body{
+                font-family: "Sofia";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sofia</h1>
+    </body>
+</html>
+```
+## 字体简写
+依次是`style`，`variant`，`weight`，`/line-height`，`family`
+其中`size`和`family`是必需的。如果缺失其他值则使用默认值。
+```CSS
+h1{
+    font: 18px sans-serif;
+}
+p{
+    font: italic small-caps bold 12px/30px Georgia, serif;
+}
+```
+# 图标
+在HTML页面的`<head>`添加图标库（`<link>`或`<script>`）
+```HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src=".js url"></script>
+        <!--或者-->
+        <link rel="stylesheet" href=".css url">
+    </head>
+    <body>
+        <h1>Sofia</h1>
+    </body>
+</html>
+```
+在使用时，用class或标签内容引入图标（根据图标库的格式）
+# 链接
+可以使用任何属性（`color`、`font-family`、`background`等）
+**四种链接状态**下的样式可以分别设置
+- `a:link`：正常未访问的链接
+- `a:visited`：访问过的链接
+- `a:hover`：鼠标悬停在上边的链接
+- `a:active`：链接被点击时
+>（顺序不能改）
+
+去下划线：`text-decoration: none`
+背景色：`backgroung-color`
+链接按钮：用盒子把链接框起来，设置样式
+指针效果：`cursor`属性
+# 列表
+## 列表样式`list-style-type`
+在HTML里边说过了。
+用`none`可以删除标记符号。再加上`margin:0 ;padding: 0;`可以把列表项推到开头。
+## 图像作为列表项标记`list-style-image`
+```CSS
+ul{
+    list-style-image: url(#);
+}
+```
+## 定位列表项标记`list-style-position`
+`outside`：（默认）项目符号不属于`<li>`项
+`inside`：项目符号属于`<li>`项，在开头推开文本
+## 列表简写`list-style`
+`type`、`position`、`image`
+如果设置了`image`但未加载出来，将会显示`type`。
+# 表格
+## 表格边框`border`
+> `table`、`th`、`td`都有单独的边框，全部设置的话就是双线边框了
+## 全宽表格`width`
+表格默认保持文字宽度。如果想要设置全宽，可以`table{width: 100%;}`
+## 合并边框
+`{table: border-collapse: collapse;}`可以把表格边框折叠为单一边框
+（双线部分合成单线，因此不需要设置`table`的`border`也可以完全框住）
+只想设置表格周围的边框，可以只为`table`设置`border`
+## 表格宽高
+用`width`和`height`定义（数值、相对大小）
+## 水平对齐`text-align`
+默认情况下`<th>`居中对齐，`<td>`靠左对齐
+`text-align`可以修改水平对齐方式
+## 垂直对齐`vertical-align`
+默认情况下`<th>`、`<td>`都是垂直居中对齐
+## 内边距`padding`
+可以增加文本到表格边框之间的距离
+## 水平分割线
+给`<th>`、`<td>`设置`border-bottom`，并且`<table>`设置`border-collapse: collapse;`以实现水平分割线
+## 可悬停表格`:hover`
+给元素设置`:hover`即可实现悬停效果
+## 条状表格`nth-child()`
+使用`nth-child()`选择器，可以为所有奇（偶）数行添加`background-color`
+```CSS
+tr:nth-child(even){background-color: #f5f5f5;}
+```
+## 响应式表格
+使用样式为`overflow-x: auto;`的块级容器（`<div>`）包含表格
+即可在容器太小无法显示时，出现水平滚动条

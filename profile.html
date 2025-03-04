@@ -99,6 +99,14 @@
             <bdo dir="rtl" style="display: block">This sentence would be writen from right to left</bdo>
             <bdo dir="ltr">This sentence would be writen from left to right</bdo>
         </p>
+        <p style = "direction: rtl;">这句话在最左边</p>
+        <p style = "direction: rtl;">This sentence would be writen leftest</p>
+        <p style = "direction: rtl; unicode-bidi: bidi-override;">这句话从右往左写</p>
+        <p style = "direction: rtl; unicode-bidi: bidi-override;">This sentence would be writen from right to left</p>
+        
+        <p><span style = "direction: rtl;">这句话不会在最左边，因为direction对内联元素无效</span></p>
+
+        
         <a href="/个人主页/pages/wow.html" name="wow" style="background-color: pink; display: block; width: 200px; margin: 0 auto;">
             <p style="text-align: center">点击<img src="/个人主页/src/wow.jpg" height="18px" width="18px" style="display: inline;"/>变<strong>大</strong></p>
         </a>
